@@ -6,17 +6,10 @@
     <title>Document</title>
 </head>
 <body>
-    <form class="form-popovers">
-        <button type="submit" class="btn">Click to toggle popever</button>
-        <div class="tooptip tooptip-hidden"> 
-            <div class="header">
-                Popever title
-            </div>
-            <div class="message-popever">
-                <span>
-                    And here`s some amaizing content. It`s very engaging. Right?
-                </span>
-            </div>
+    <form class="form-popovers" novalidate>
+        <button type="submit" class="btn" id="btnID" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popever</button>
+        <div class="popover-message tooptip-hidden"> 
+            
         </div>
     </form>
 </body>

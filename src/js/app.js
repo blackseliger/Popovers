@@ -1,14 +1,34 @@
-const formPopevers = document.querySelector('.form-popovers');
+const formPopevers = [...document.querySelector('.form-popovers')];
 const btn = document.querySelector('.btn');
-const tooptip = document.querySelector('.tooptip');
+const popoverMessage = document.querySelector('.popover-message');
 
-formPopevers.addEventListener('submit', (e) => {
+// () => {
+//   btn.popover({
+//     container: 'body',
+//   });
+// };
+
+// document.addEventListener('DOMContentLoaded', () => {
+//   ('[data-toggle="popover"]').popover();
+//   console.log(`something?`)
+// });
+
+btn.addEventListener('click', (e) => {
   e.preventDefault();
-  if (tooptip.classList.contains('.tooptip-hidden')) {
-    tooptip.classList.remove('.tooptip-hidden');
-    console.log('gdhkjgd');
-  }
+  const firstNoValid = formPopevers.find((el) => (!el.validity.valid));
+  console.log(firstNoValid);
+  formPopevers[0].validuty();
+  // ('#popever').popover('show');
+  // (() => {
+  //   ('[data-toggle="popover"]').popover();
+  // });
+  // popoverMessage.textContent = 'test';
 
-  tooptip.style.left = `${btn.offsetWidth - btn.offsetWidth}px`;
-  tooptip.style.top = `${btn.offsetTop - btn.offsetHeight * 2}px`;
+  // if (tooptip.classList.contains('.tooptip-hidden')) {
+  //   tooptip.classList.remove('.tooptip-hidden');
+  //   console.log('gdhkjgd');
+  // }
+
+  // tooptip.style.left = `${btn.offsetWidth - btn.offsetWidth}px`;
+  // tooptip.style.top = `${btn.offsetTop - btn.offsetHeight * 2}px`;
 });
