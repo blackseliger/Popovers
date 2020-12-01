@@ -34,10 +34,10 @@ body {
 
 .popover-message {
     position: absolute;
-    margin-left: 100px;
-    top: 50px;
+    margin-left: 50px;
+    top: 45px;
     text-align: center;
-    width: 100px;
+    width: 200px;
     height: 50px;
     border-radius: 2px;
     box-shadow: 0 0 2px black;
